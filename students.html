@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect - Students</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="announcements.html">Announcements</a>
+    <a href="students.html">Students</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<div class="content">
+    <h2>Student Profiles</h2>
+
+    <div class="student-container">
+
+        <div class="student-card fade-in">
+            <h3>Nida Omair</h3>
+            <p><b>Roll No:</b> BSCS-001</p>
+            <p><b>Department:</b> Computer Science</p>
+            <p><b>Email:</b> nida@example.com</p>
+        </div>
+
+        <div class="student-card fade-in">
+            <h3>Ali Khan</h3>
+            <p><b>Roll No:</b> BSCS-002</p>
+            <p><b>Department:</b> Computer Science</p>
+            <p><b>Email:</b> ali@example.com</p>
+        </div>
+
+        <div class="student-card fade-in">
+            <h3>Sara Ahmed</h3>
+            <p><b>Roll No:</b> BSCS-003</p>
+            <p><b>Department:</b> Software Engineering</p>
+            <p><b>Email:</b> sara@example.com</p>
+        </div>
+
+    </div>
+</div>
+<script>
+    const role = localStorage.getItem("userRole");
+
+    if (role !== "faculty") {
+        alert("Access denied. Faculty only.");
+        window.location.href = "login.html";
+    }
+</script>
+</body>
+</html>

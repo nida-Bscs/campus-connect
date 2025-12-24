@@ -1,0 +1,511 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Global Styling */
+body {
+    background: #f4f5f7;
+    color: #111827;
+    font-family: 'Poppins', sans-serif;
+}h1, h2, h3 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+p {
+    line-height: 1.7;
+    color: #374151;
+}
+
+/* NAVBAR */
+nav {
+    background: #1f2937;
+    padding: 12px;
+}
+
+nav a {
+    color: #f9fafb;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #c89b3c;
+}
+
+.hero-section {
+    height: 75vh;
+    background: url("campus.jpg") center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 41, 55, 0.78);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-overlay h1 {
+    font-size: 44px;
+    color: #f9fafb;
+    letter-spacing: 1px;
+}
+
+.hero-overlay p {
+    font-size: 18px;
+    color: #d1d5db;
+    margin: 15px 0 25px;
+}
+
+.hero-btn {
+    background: #c89b3c;
+    color: #1f2937;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.hero-btn:hover {
+    background: #b08a32;
+}
+
+/* Sections */
+.content {
+    width: 85%;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+/* Announcement Cards */
+.announcement {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    border-left: 5px solid #007bff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.announcement h3 {
+    margin: 0;
+    color: #007bff;
+}
+
+/* Departments Cards */
+.department-box {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Footer (optional) */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0056b3;
+    color: white;
+    margin-top: 40px;
+}
+/* Noticeboard Card Styles */
+.notice {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    position: relative;
+    border-left: 7px solid #007bff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover Effect */
+.notice:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* NEW Tag */
+.tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #ff4757;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Category Colors */
+.notice.exam {
+    border-left-color: #ff4757; /* Red */
+}
+
+.notice.event {
+    border-left-color: #ffa502; /* Orange */
+}
+
+.notice.holiday {
+    border-left-color: #2ed573; /* Green */
+}
+
+.notice h3 {
+    margin-bottom: 8px;
+    color: #007bff;
+}
+/* ============================
+      MOBILE RESPONSIVE DESIGN
+   ============================ */
+
+@media (max-width: 768px) {
+
+    /* Navigation */
+    nav a {
+        display: block;
+        padding: 10px 0;
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    nav {
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* Content Box */
+    .content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* Notice Cards */
+    .notice {
+        width: 95%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .tag {
+        top: 8px;
+        right: 8px;
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    /* Department Cards */
+    .department-box {
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+}
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.search-box {
+    width: 60%;
+    padding: 12px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.login-container {
+    width: 300px;
+    margin: 80px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login-container input,
+.login-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #00b3ff;
+}
+
+#error {
+    color: red;
+    font-size: 14px;
+}
+.upload-section {
+    width: 70%;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.upload-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.upload-section button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.upload-section button:hover {
+    background: #00b3ff;
+}
+.delete-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}.student-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.student-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.student-card h3 {
+    margin-bottom: 10px;
+    color: #333;
+}.portfolio-container {
+    width: 80%;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: gray;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.skills ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.project-card ul {
+    margin: 15px 0;
+}
+
+.project-links {
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.btn.secondary {
+    background: #00b3ff;
+}.footer {
+    background: #1f2937;
+    color: #d1d5db;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer h3 {
+    color: #f9fafb;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #d1d5db;
+    margin: 0 12px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #c89b3c;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: #9ca3af;
+}@media (max-width: 768px) {
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px 10px;
+        font-size: 16px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 32px;
+    }
+
+    .hero-overlay p {
+        font-size: 16px;
+    }
+
+    .hero-section {
+        height: 60vh;
+    }
+
+    .feature-card {
+        text-align: center;
+    }
+
+    .footer {
+        padding: 30px 15px;
+    }
+}/* Fade-in animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to sections */
+.hero-overlay,
+.features,
+.footer {
+    animation: fadeUp 0.8s ease-in-out;
+}
+
+/* Smooth hover transition */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 30px rgba(0,0,0,0.12);
+}

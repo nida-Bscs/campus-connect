@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect - Announcements</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="announcements.html">Announcements</a>
+        <a href="departments.html">Departments</a>
+        <a href="contact.html">Contact</a>
+         <a href="students.html">Students</a>
+         <a href="login.html">Login</a>
+    </nav>
+<input 
+  type="text" 
+  id="searchInput"
+  placeholder="Search announcements..."
+  onkeyup="searchNotices()"
+  class="search-box"
+/>
+    <!-- Content Wrapper -->
+   <div class="upload-section">
+    <h3>Faculty: Upload Notice</h3>
+
+    <input type="text" id="noticeTitle" placeholder="Notice Title">
+    <input type="file" id="noticeFile">
+
+    <button onclick="uploadNotice()">Upload</button>
+</div>
+
+
+        <h2>Latest Announcements</h2>
+        
+
+        <div class="notice exam fade-in">
+            <span class="tag">NEW</span>
+            <h3>Midterm Exam Schedule Released</h3>
+            <p>Date: 10 January 2025</p>
+            <p>Final exams for BSCS will begin from 20th January. The full schedule is available on the student portal.</p>
+        </div>
+
+        <div class="notice event fade-in">
+            <h3>Guest Lecture on AI</h3>
+            <p>Date: 15 January 2025</p>
+            <p>The Computer Science Department is organizing a lecture on “AI Trends 2025” by Dr. Ahmed.</p>
+        </div>
+
+        <div class="notice holiday fade-in">
+            <h3>Semester Break Announcement</h3>
+            <p>Date: 25 December 2024</p>
+            <p>The university will remain closed from 25th December to 1st January.</p>
+        </div>
+
+    </div> <!-- content ends -->
+    <div id="uploadedNotices"></div>
+    
+<script src="script.js"></script>
+</body>
+</html>
